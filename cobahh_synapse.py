@@ -26,7 +26,7 @@ Ei = -80 * mV
 # we = 6 * nS # excitatory synaptic weight (voltage)
 # wi = 67 * nS # inhibitory synaptic weight
 Iext_e = float(sys.argv[1]) * uA  # original value 1.5 nA?
-Iext_i = float(sys.argv[2]) * uA  # original value 5 nA?
+0Iext_i = float(sys.argv[2]) * uA  # original value 5 nA?
 alpha_ee	= float(sys.argv[3]) # original 0.12
 alpha_ie	= float(sys.argv[4]) # original 0.06
 alpha_ei	= float(sys.argv[5]) # original 0.2
@@ -162,7 +162,7 @@ xlim(0,500)
 ylim(0,len(Pi))
 subplot(413)
 total = zeros(len(trace[0]))
-total2 = zeros(len(trace2[0]))
+total2 = zeros(len(trace2[0]))	
 
 for i in arange(0,len(Pe)):
 	total += trace[i]
