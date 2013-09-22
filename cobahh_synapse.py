@@ -4,7 +4,7 @@ from sys import *
 # Parameters
 N=200
 timestep = 0.1 * ms
-phi = 3.0
+phi = float(sys.argv[7]) # original 3.0
 
 area = 20000 * umetre ** 2
 Cm = (1 * ufarad * cm ** -2) * area
@@ -178,4 +178,4 @@ for i in arange(0,len(Pi)):
 plot(total2/len(Pi))
 
 #plot(trace2[50])
-savefig('e'+argv[1]+'i'+argv[2]+'aee'+argv[3]+'aei'+argv[4]+'aie'+argv[5]+'aii'+argv[6]+'.png')
+savefig('e'+argv[1]+'i'+argv[2]+'aee'+argv[3]+'aei'+argv[4]+'aie'+argv[5]+'aii'+argv[6]+'phi'+argv[7]+'.png')
