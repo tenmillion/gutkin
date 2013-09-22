@@ -4,6 +4,7 @@ from sys import *
 # Parameters
 N=200
 timestep = 0.1 * ms
+phi = 3.0
 
 area = 20000 * umetre ** 2
 Cm = (1 * ufarad * cm ** -2) * area
@@ -38,9 +39,9 @@ eqs = Equations('''
 dv/dt = (gl*(El-v)+Iesyn+Iisyn+Iext-\
     g_na*(m*m*m)*h*(v-ENa)-\
     g_kd*(n*n*n*n)*(v-EK))/Cm : volt
-dm/dt = alpham*(1-m)-betam*m : 1
-dn/dt = alphan*(1-n)-betan*n : 1
-dh/dt = alphah*(1-h)-betah*h : 1
+dm/dt = phi*(alpham*(1-m)-betam*m) : 1
+dn/dt = phi*(alphan*(1-n)-betan*n) : 1
+dh/dt = phi*(alphah*(1-h)-betah*h) : 1
 dse/dt = (A*sigma*(1-se)-se)/taue : 1
 dsi/dt = (A*sigma*(1-si)-si)/taui : 1
 
