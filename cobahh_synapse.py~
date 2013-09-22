@@ -136,9 +136,9 @@ print "Setting up external input..."
 Pi.Iext = TimedArray([Iext_i]*int((500*ms)/timestep),start=0*ms,dt=timestep)
 for j in range(21,80):
 	Pe[j].Iext = TimedArray([0*uA]*int((12*ms)/timestep)+[Iext_e*exp(-60.0*(float(j-(len(Pe)/2))/len(Pe))**2.0)]*int((30*ms)/timestep),start=0*ms,dt=timestep)
-#	plot([0*uA]*int((12*ms)/timestep)+[1.5*exp(-60.0*(float(j-(len(Pe)/2))/len(Pe))**2.0)*uA]*int((30*ms)/timestep))
+	plot([0*uA]*int((12*ms)/timestep)+[1.5*exp(-60.0*(float(j-(len(Pe)/2))/len(Pe))**2.0)*uA]*int((30*ms)/timestep))
 print "done."
-#show()
+show()
 	
 # Record the number of spikes and voltage traces
 trace = StateMonitor(Pe, 'v', record=arange(0,len(Pe)))
@@ -164,16 +164,15 @@ subplot(413)
 total = zeros(len(trace[0]))
 total2 = zeros(len(trace2[0]))
 
-for i in arange(0,len(Pe)):
-	total += trace[i]
+#for i in arange(0,len(Pe)):
+#	total += trace[i]
 	# plot(trace[i])
-plot(total/len(Pe))
-#plot(trace[50])
+#plot(total/len(Pe))
+plot(trace[50])
 
 subplot(414)
 for i in arange(0,len(Pi)):
 	total2 += trace2[i]
 	# plot(trace2[i])
 plot(total2/len(Pi))
-#plot(trace2[50])
-savefig('e'+argv[1]+'i'+argv[2]+'.png')
+savefig('foo.png')
