@@ -25,12 +25,12 @@ Ee = 0 * mV
 Ei = -80 * mV
 # we = 6 * nS # excitatory synaptic weight (voltage)
 # wi = 67 * nS # inhibitory synaptic weight
-alpha_ee	= 0.12
-alpha_ie	= 0.06
-alpha_ei	= 0.2 
-alpha_ii	= 0.02
 Iext_e = float(sys.argv[1]) * uA  # original value 1.5 nA?
 Iext_i = float(sys.argv[2]) * uA  # original value 5 nA?
+alpha_ee	= float(sys.argv[3]) # original 0.12
+alpha_ie	= float(sys.argv[4]) # original 0.06
+alpha_ei	= float(sys.argv[5]) # original 0.2
+alpha_ii	= float(sys.argv[6]) # original 0.02
 
 # The model
 
@@ -175,5 +175,6 @@ for i in arange(0,len(Pi)):
 	total2 += trace2[i]
 	# plot(trace2[i])
 plot(total2/len(Pi))
+
 #plot(trace2[50])
-savefig('e'+argv[1]+'i'+argv[2]+'.png')
+savefig('e'+argv[1]+'i'+argv[2]+'aee'+argv[3]+'aei'+argv[4]+'aie'+argv[5]+'aii'+argv[6]+'.png')
