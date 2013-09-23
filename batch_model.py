@@ -140,7 +140,7 @@ print "done."
 # Record the number of spikes and voltage traces
 trace = StateMonitor(Pe, 'v', record=arange(0,len(Pe)))
 trace2 = StateMonitor(Pi, 'v', record=arange(0,len(Pi)))
-filename = 'e'+argv[1]+'i'+argv[2]+'aee'+argv[3]+'aei'+argv[4]+'aie'+argv[5]+'aii'+argv[6]+'phi'+argv[7]+'.txt'
+filename = 'e'+argv[1]+'i'+argv[2]+'aee'+argv[3]+'aei'+argv[4]+'aie'+argv[5]+'aii'+argv[6]+'phi'+argv[7]+'_2pulses.txt'
 Me = FileSpikeMonitor(Pe,'Pe_'+filename)
 Mi = FileSpikeMonitor(Pi,'Pi_'+filename)
 
