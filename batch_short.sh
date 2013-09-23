@@ -1,5 +1,5 @@
-# cat batch2.sh
-for phi in 3.0 #1.0 1.7320508075688772 5.196152422706632 9.0
+# cat batch_short.sh
+for phi in 3.0 1.0 1.7320508075688772 5.196152422706632 9.0
 do
     for exc in 0.0015
     do
@@ -13,7 +13,7 @@ do
 		    do
 			for aii in 0.02
 			do
-			    ~/python batch_model.py $exc $inh $aee $aei $aie $aii $phi
+			    ~/python batch_model_short.py $exc $inh $aee $aei $aie $aii $phi
 			 done
 		     done
 		 done
