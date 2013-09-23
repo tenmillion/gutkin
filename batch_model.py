@@ -92,7 +92,7 @@ Pi.Iesyn = Sei.Iesyn # from E to I, excitatory synapses
 Pi.Iisyn = Sii.Iisyn
 
 # Initialization
-P.v = El + (randn(len(P)) * 3 - 3) * mV
+P.v = El + (randn(len(P)) * 5 - 5) * mV
 
 #Set up synaptic weights
 print "Setting up synaptic weights..."
