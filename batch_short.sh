@@ -5,11 +5,9 @@ do
     do
    	for aei in 0.1 0.3 0.5 0.7 1.0
        	do
-	    for pulse in 20 30 50
-       	    do
-            ~/python batch_model_short_str.py 0.0015 0.0002 $aee $aei 
-0.06 0.02 $phi $pulse
-	    done
+ 	    if ! test -s "*_aee$aeeaei$aeiphi$phi.txt"; then
+            	~/python batch_model_short_str.py 0.0015 0.0002 $aee $aei 0.06 0.02 $phi
+            fi
 	done
     done
 done
