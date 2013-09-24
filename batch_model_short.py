@@ -134,19 +134,19 @@ print 'done.'
 print "Setting up external input..."
 Pi.Iext = TimedArray([Iext_i]*int((500*ms)/timestep),start=0*ms,dt=timestep)
 for j in range(21,80):
-	Pe[j].Iext = TimedArray([0*uA]*int((112*ms)/timestep)+[Iext_e*exp(-60.0*(float(j-(len(Pe)/2))/len(Pe))**2.0)]*int((30*ms)/timestep)+[0*uA]*int((250*ms)/timestep)+[1*pA]*int((1*ms)/timestep),start=0*ms,dt=timestep)
+	Pe[j].Iext = TimedArray([0*uA]*int((112*ms)/timestep)+[Iext_e*exp(-60.0*(float(j-(len(Pe)/2))/len(Pe))**2.0)]*int((30*ms)/timestep),start=0*ms,dt=timestep)
 print "done."
 	
 # Record the number of spikes and voltage traces
 trace = StateMonitor(Pe, 'v', record=arange(0,len(Pe)))
 trace2 = StateMonitor(Pi, 'v', record=arange(0,len(Pi)))
-filename = 'e'+argv[1]+'i'+argv[2]+'aee'+argv[3]+'aei'+argv[4]+'aie'+argv[5]+'aii'+argv[6]+'phi'+argv[7]+'_2pulses.txt'
+filename = 'e'+argv[1]+'i'+argv[2]+'aee'+argv[3]+'aei'+argv[4]+'aie'+argv[5]+'aii'+argv[6]+'phi'+argv[7]+'_500ms.txt'
 Me = FileSpikeMonitor(Pe,'Pe_'+filename)
 Mi = FileSpikeMonitor(Pi,'Pi_'+filename)
 
 print filename
 print "Running simulation..."
-run(2000 * ms)
+run(500 * ms)
 print "done."
 print "Excitatory spikes: ", Me.nspikes
 print "Inhibitory spikes: ", Mi.nspikes

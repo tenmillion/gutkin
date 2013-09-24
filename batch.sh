@@ -13,7 +13,7 @@ do
 		    do
 			for aii in 0.010 0.050 0.010 0.050
 			do
-			    ~/python cobahh_synapse.py $exc $inh $aee $aei $aie $aii $phi
+			    ~/python batch_model.py $exc $inh $aee $aei $aie $aii $phi
 			 done
 		     done
 		 done
