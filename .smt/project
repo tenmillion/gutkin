@@ -1,0 +1,32 @@
+{
+  "default_executable": null, 
+  "default_repository": {
+    "url": "/home/yoriko-y/Dropbox/Academic/NAIST_MI/Cool/batch", 
+    "type": "sumatra.versioncontrol._git.GitRepository", 
+    "upstream": null
+  }, 
+  "name": "gutkin_batch", 
+  "input_datastore": {
+    "root": "/", 
+    "type": "sumatra.datastore.filesystem.FileSystemDataStore"
+  }, 
+  "default_launch_mode": {
+    "working_directory": "/home/yoriko-y/Dropbox/Academic/NAIST_MI/Cool/batch", 
+    "type": "sumatra.launch.SerialLaunchMode"
+  }, 
+  "record_store": {
+    "db_file": "/home/yoriko-y/Dropbox/Academic/NAIST_MI/Cool/batch/.smt/records", 
+    "type": "sumatra.recordstore.django_store.DjangoRecordStore"
+  }, 
+  "data_store": {
+    "root": "./Data", 
+    "type": "sumatra.datastore.filesystem.FileSystemDataStore"
+  }, 
+  "on_changed": "error", 
+  "data_label": null, 
+  "default_main_file": null, 
+  "label_generator": "timestamp", 
+  "_most_recent": "20130923-125117", 
+  "timestamp_format": "%Y%m%d-%H%M%S", 
+  "description": ""
+}
